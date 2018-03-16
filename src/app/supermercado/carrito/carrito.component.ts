@@ -8,6 +8,7 @@ import { Producto } from '../../model/producto';
 })
 export class CarritoComponent implements OnInit {
   @Input ('cestaParametro') cesta: Array<Producto>;
+  @Input ('precioParametro') total: number;
 
   constructor() { }
 

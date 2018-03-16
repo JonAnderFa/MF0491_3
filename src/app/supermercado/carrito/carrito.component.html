@@ -1,4 +1,4 @@
-<div class="extra" *ngFor="let producto of cesta ">
+<div class="extra" *ngFor="let producto of cesta; let i = index ">
     <div class="card">
       <div class="row">
         <div class="col-sm-4 foto">
@@ -13,9 +13,19 @@
           </p>
         </div>
         <div class="col-sm-4">
-          <span><i class="fa fa-trash-o" aria-hidden="true"></i>
+          <span><i (click)="restaCesto(i)" class="fa fa-trash-o" aria-hidden="true"></i>
           </span>
         </div>
       </div>
+    </div>
+</div>
+<div>
+    <div class="row">
+        <div class="col-sm-6">
+          <p>Total:</p>
+        </div>
+        <div class="col-sm-6">
+          <p>{{total}}€</p>
+        </div>
     </div>
 </div>
