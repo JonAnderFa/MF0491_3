@@ -23,10 +23,21 @@ export class SupermercadoComponent implements OnInit {
   ngOnInit() {
     console.log('ProductoComponent ngOnInit');
     this.stock=this.productosService.getAll();
-    this.precio=0.0;
-    let producto = new Producto("aa",3,false,33,"ddd","ddd");
+    let producto = new Producto("Oreo",3,false,0,"6€ / paquete","https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Oreo-Two-Cookies.jpg/1200px-Oreo-Two-Cookies.jpg");
     this.cesta.push(producto);
+    this.cesta.push(producto);
+    this.cesta.push(producto);
+    this.cestaPrecio();
     
+  }
+  cestaPrecio(){
+    let total=0;
+    this.cesta.forEach(element => {
+      total=total+element.precio;
+      
+    });
+    this.precio=total;
+
   }
 
 }
