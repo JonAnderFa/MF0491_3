@@ -15,7 +15,7 @@ export class ProductosService {
    * Retorna todos los Productos que tenemos en Stock (dentro de los mocks)
   */
  getAll():Producto[]{
-  console.log('CochesService getAll');
+  console.log('ProductosService getAll');
   //Creamos el producto fuera del array
   let producto;
   
