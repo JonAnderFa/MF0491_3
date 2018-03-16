@@ -29,7 +29,7 @@ export class ProductosService {
                         element.precio, 
                         element.oferta,
                         element.precioOferta,
-                        element.precioLitro,
+                        element.descripcionCantidad,
                         element.foto
 
                         );

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Producto } from '../../model/producto';
 
 @Component({
   selector: 'app-carrito',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carrito.component.scss']
 })
 export class CarritoComponent implements OnInit {
+  @Input ('cestaParametro') cesta: Array<Producto>;
 
   constructor() { }
 

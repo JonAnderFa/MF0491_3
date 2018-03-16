@@ -1,0 +1,44 @@
+.foto{
+    min-width: 146px;
+    min-height: 146px;
+    position: relative;
+}
+span{
+    position: absolute;
+    top:0;
+    left: 0;
+    font-size: 1em;
+}
+.tachado{
+    text-decoration: line-through;
+    font-size: 0.8em;
+}
+img{
+    max-width: 100%;
+    max-height: 146px;
+    
+}
+.jumbotron{
+    min-height: 525px;
+    max-height: 525px;
+    
+}
+.descripcion{
+    font-size: 1em;
+    height: 80px;
+    overflow: auto;
+}
+.rojo{
+    color: red;
+}
+.card{
+    margin-top: 5px;
+}
+.btn-group{
+    margin-bottom: 5px;
+    margin-left: 20px;
+    input{
+        width: 50px;
+    }
+    width: 208px;
+}

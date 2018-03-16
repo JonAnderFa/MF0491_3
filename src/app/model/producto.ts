@@ -4,14 +4,14 @@ export class Producto{
     precio:number;
     oferta:boolean;
     precioOferta:number;
-    precioLitro:number;
+    descripcionCantidad:string;
     foto: string;
 
     constructor(nombre: string,
     precio:number,
     oferta:boolean,
     precioOferta: number,
-    precioLitro:number,
+    descripcionCantidad:string,
     foto: string
     ){
         console.log('Producto constructor');
@@ -19,7 +19,7 @@ export class Producto{
         this.precio = precio;
         this.oferta= oferta;
         this.precioOferta= precioOferta;
-        this.precioLitro= precioLitro;
+        this.descripcionCantidad= descripcionCantidad;
         this.foto = foto;
 
     }

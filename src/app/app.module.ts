@@ -1,13 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+//componente
+import { CatalogoComponent } from './supermercado/catalogo/catalogo.component';
+import { CarritoComponent } from './supermercado/carrito/carrito.component';
 import { SupermercadoComponent } from './supermercado/supermercado.component';
 //Service
 import { ProductosService } from './providers/productos.service';
-import { CatalogoComponent } from './supermercado/catalogo/catalogo.component';
-import { CarritoComponent } from './supermercado/carrito/carrito.component';
+
+//Pipe
+import { FilterPipe } from './pipes/filter.producto';
 
 
 @NgModule({
@@ -15,10 +19,12 @@ import { CarritoComponent } from './supermercado/carrito/carrito.component';
     AppComponent,
     SupermercadoComponent,
     CatalogoComponent,
+    FilterPipe,
     CarritoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule 
   ],
   providers: [
     ProductosService,

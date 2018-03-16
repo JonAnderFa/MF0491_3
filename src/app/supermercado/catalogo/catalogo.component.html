@@ -1,14 +1,23 @@
 
-<div class="thumbnail">
-  <img src="{{producto.foto}}" alt="foto {{producto.nombre}} ">
-  <div class="caption">
-    <h3>{{producto.nombre}}</h3>
-    <!--<p>{{coche1.modelo}} {{coche1.version}}</p>
-    <p>Consumo a los 100km: {{coche1.consumo}}  <span [class]="(coche1.consumo-coche2.consumo>0)?'badge positivo':'badge negativo'">{{coche1.consumo-coche2.consumo | round}}</span></p>
-    <p>Puertas :{{coche1.puertas}}  <span [class]="(coche1.puertas-coche2.puertas>0)?'badge positivo':'badge negativo'">{{coche1.puertas-coche2.puertas}}</span></p>
-    <p>Potencia :{{coche1.caballos}}<span [class]="(coche1.caballos-coche2.caballos>0)?'badge positivo':'badge negativo'">{{coche1.caballos-coche2.caballos}}</span> </p>
-    -->
-  </div>
-</div>
-
-
+  <div class="card" >
+      <div class="foto">
+          <span class="oferta" *ngIf="producto.oferta" class="badge badge-pill badge-danger">{{producto.precioOferta}}%</span>
+          <img src="{{producto.foto}}" alt="foto {{producto.nombre}} ">
+        </div>
+      <div class="card-body">
+          <p class="lead">
+              <b [class.tachado]="producto.oferta">{{producto.precio}} €</b>
+              <b *ngIf="producto.oferta"class="rojo">{{descuentoM}}€</b>
+            </p>
+            <p><i>({{producto.descripcionCantidad}})</i></p>
+            <p class="lead descripcion">
+                {{producto.nombre}}
+            </p>
+             <div class="btn-group" role="group" aria-label="Basic example">
+               <button type="button" class="btn btn-success" (click)="restaCantidad()">-</button>
+               <input type="text" class="btn btn-success" value="{{cantidad}}">
+               <button type="button" class="btn btn-success" (click)="sumaCantidad()">+</button>
+             </div>
+            <a class="btn btn-primary btn-lg btn-block" href="#" role="button">Añadir</a>
+      </div>
+    </div>
